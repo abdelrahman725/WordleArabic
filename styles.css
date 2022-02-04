@@ -1,52 +1,98 @@
 * {
   text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   background-color: black;
   color: aliceblue;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',  sans-serif;
+}
+
+.container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .title {
-  margin: 10px;
   font-size: 1cm;
 }
 
 .title hr {
   position: relative;
-  bottom: 10px;
+  bottom: 15px;
   width: 400px;
   opacity: 30%;
 }
 
-.GameBoard .game_row input {
-  caret-color: transparent;
-  font-size: xx-large;
-  width: 60px;
-  height: 65px;
-  margin: 2px;
-  color: white;
-  border: 1.5px solid #434343;
-  background-color: black;
-}
-
-.notes {
-  margin-top: 20px;
+#alerting {
+  visibility: hidden;
+  z-index: 2;
+  position: relative;
+  bottom: 5px;
+  font-size: large;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  width: 160px;
   margin-left: auto;
   margin-right: auto;
-  width: 500px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+}
+
+.panel {
+  display: none;
+  padding: 8px;
+  background-color: white;
+  color: black;
+  position: absolute;
+  z-index: 2;
+  width: 400px;
+  height: 300px;
+  margin-top: 50px;
+}
+
+.panel i {
+  color: #4e4d4d;
+  float: right;
+}
+
+.panel i:hover {
+  cursor: pointer;
+}
+
+.panel p {
   font-size: large;
 }
 
-.notes p {
-  font-size: medium;
+.panel #status {
+  font-size: 0.8cm;
+}
+
+.panel #timer {
+  font-size: 0.8cm;
+}
+
+.GameBoard {
+  position: absolute;
+}
+
+.GameBoard input {
+  caret-color: transparent;
+  font-size: xx-large;
+  width: 55px;
+  height: 60px;
+  margin: 2px;
+  border-radius: 3px;
+  color: white;
+  border: 1.5px solid #434343;
+  background-color: black;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,4 +1,4 @@
-ArabicWords = [
+const ArabicWords = [
   'أباظة',
   'أبجدي',
   'أبحاث',
@@ -16,6 +16,7 @@ ArabicWords = [
   'أبنية',
   'أبواب',
   'أبولو',
+  'أفعال',
   'أبوية',
   'أبيات',
   'أتاري',
@@ -445,10 +446,35 @@ ArabicWords = [
 ]
 
 const DictLength = ArabicWords.length
-function Timer ()
+function Alerting(msg)
 {
+  let AlertBox = document.getElementById("alerting")
+  AlertBox.style.visibility="visible"
+  AlertBox.innerHTML = msg
+  setTimeout(()=>{
+   AlertBox.style.visibility="hidden"
+  },2000)
 
 }
+
+
+function TimeLeft()
+{
+  let timer = document.getElementById("timer");
+
+    setInterval(()=>{
+
+    let CurenTime = new Date();
+    let  EndTime = new Date(CurenTime.getFullYear(),CurenTime.getMonth(), CurenTime.getDay()+1); 
+    const hoursleft   =  (EndTime-CurenTime)/1000/60/60-24
+    const minutesleft = (hoursleft- Math.floor(hoursleft)) * 60
+    const secondsleft = (minutesleft-Math.floor(minutesleft))*60
+    timer.innerHTML = `0${Math.trunc(hoursleft)}:${Math.trunc(minutesleft)} :${Math.trunc(secondsleft)}`;
+
+  },1000)
+}
+
+
 
 function SearchDict(word)
 {
@@ -459,6 +485,27 @@ function SearchDict(word)
   }
   return false
 }
+
+function ShowPanel(state)
+{
+  
+  if (state=="WINNER")
+  {
+
+    document.getElementById("status").innerHTML = "أحسنت"
+  }
+  else
+  {
+    document.getElementById("status").innerHTML = "حاول المرة القادمة"
+  }
+  setTimeout(()=>{
+    document.querySelector(".panel").style.display = "block"
+    document.querySelector(".GameBoard").style.opacity = "60%"
+    document.querySelector(".title").style.opacity = "60%"
+  },1000)
+}
+
+
 
 document.addEventListener("DOMContentLoaded",()=>
 {
@@ -485,6 +532,14 @@ if (localStorage.userwords === undefined )
 
 else
 {
+ 
+  let status = localStorage.getItem("gamestatus")
+  if (status !=="playing")
+  {
+      TimeLeft()  
+      ShowPanel(status)
+  }
+
 
   let  TypedWords  = JSON.parse(localStorage.getItem('userwords'));
   let  Evaluations = JSON.parse(localStorage.getItem('evaluations'));
@@ -501,14 +556,19 @@ else
   }
  
 }
+// closing panel
+document.querySelector("i").addEventListener("click",()=>{
+  document.querySelector(".GameBoard").style.opacity = "100%"
+  document.querySelector(".title").style.opacity = "100%"
+  document.querySelector(".panel").style.display = "none"
+
+})
 
   const WordForToday = ArabicWords[80]
   let RowWord = []
   let current_row =  Number(localStorage.row) ;
   let current_position = 0;
-
-
-  AraicOnlyPattern=/^[\u0621-\u064A]+$/
+  let  AraicOnlyPattern=/^[\u0621-\u064A]+$/
 
   document.addEventListener("keypress",e=>{
     if (current_position <=4   && current_row <=5 && localStorage.gamestatus =="playing")
@@ -521,6 +581,7 @@ else
         {
           RowWord.push(e.key)
           CurrentLetter.value= e.key
+          CurrentLetter.style.borderColor = "white";
         }
           current_position++;
       }
@@ -534,7 +595,9 @@ document.addEventListener("keydown",e=>{
   if(e.key=="Backspace" && current_position >0  && localStorage.gamestatus =="playing")
   {
     current_position--;  
-    document.getElementById(`row${current_row}_letter${current_position}`).value="";
+    let CurrentLetter = document.getElementById(`row${current_row}_letter${current_position}`);
+    CurrentLetter.value="";
+    CurrentLetter.style.borderColor = "#434343"
     RowWord.pop()
   }
 
@@ -558,7 +621,7 @@ document.addEventListener("keydown",e=>{
 
       for (let i =0;i<5;i++)
       {
-   
+        CurrentRowLetters[i].style.borderColor = "#434343"
         if (RowWord[i] == ValidWord[i])
           {
             CurrentRowLetters[i].style.backgroundColor= "green"
@@ -578,15 +641,18 @@ document.addEventListener("keydown",e=>{
           if (correct_letters==5)
           {
             localStorage.setItem("gamestatus","WINNER")
+            ShowPanel("WINNER")
           }
           else
           {
             localStorage.setItem("gamestatus","LOSER")
+           ShowPanel("LOSER")
           }
+          TimeLeft()
+     
         }
-          if (correct_letters<5)
-          {
 
+         
             OuterLoop:
             for(let i = 0;i<5;i++)
             {
@@ -607,20 +673,21 @@ document.addEventListener("keydown",e=>{
               current_evaluations[current_row][i] = "#3A3A3C"
             }
 
-        }
+        
         
         RowWord=[]
         ValidWord = []
         current_row ++;
         localStorage.row = Number(localStorage.row) + 1;
-        userwords = JSON.parse(localStorage.getItem('userwords'));
+        let userwords = JSON.parse(localStorage.getItem('userwords'));
+        console.log(RowWordString)
         userwords.push(RowWordString);
         localStorage.setItem('userwords', JSON.stringify(userwords));
         localStorage.setItem('evaluations', JSON.stringify(current_evaluations));
     }
     else
     {
-      alert("not in the words list")
+      Alerting("كلمة خاطئة")
     }
 
   

@@ -6,15 +6,37 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wordle in Arabic</title>
+  <script type ="module" src="script.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-  <script src="script.js"></script>
   <link rel="stylesheet" href="styles.css"> 
 </head>
 
 <body>
-<div class="title">
-  wordle in arabic
-  <hr>
+  
+  
+  <div class="title">
+    wordle in arabic
+    <hr>
+  </div>
+  
+<div class="container">
+
+<div id="alerting" ></div>
+<div class="panel">
+ 
+  <i class="material-icons">&#xe5cd;</i>
+ <p id="status"></p>
+ <br>
+ <br>
+ 
+ <br>
+ <p>
+   الكلمة التالية بعد 
+ </p>
+  
+  <div id="timer"></div>
+
 </div>
 
 
@@ -66,12 +88,6 @@
  </div>
 
 </div>
-<div class="notes">
-
-<p>1.&nbsp; words that start with ( ال ) are excluded</p>
-
-<p>2.&nbsp; guess only nouns and adjectives ( plurarl or singular) ( male or female )</p>
-
 </div>
 </body>
 </html>
