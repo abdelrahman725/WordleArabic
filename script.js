@@ -1,226 +1,467 @@
 ArabicWords = [
-'أقداد',
-'أبراج',
-'ألفاظ',
-'بوابل',
-'باردة',
-'باكرة',
-'براقة',
-'باهتة',
-'بترول',
-'بذرات',
-'بطاطس',
-'باهظة',
-'بطلات',
-'باقات',
-'بربرة',
-'بائعة',
-'بوابة',
-'برشام',
-'بقاعة',
-'بطاقة',
-'برونز',
-'بشائر',
-'بورصة',
-'برمجة',
-'بعوضة',
-'برهان',
-'الفشن',
-'تشابك',
-'اباحي',
-'الفطر',
-'تنظيف',
-'تحويل',
-'رئاسة',
-'تأييد',
-'تنافس',
-'أشبال',
-'ترقيم',
-'ألماس',
-'روتين',
-'تحريك',
-'السجن',
-'تاريخ',
-'تشريع',
-'تفاحة',
-'تجاور',
-'تجفيف',
-'الفضي',
-'تقييم',
-'أطفال',
-'ترفيه',
-'الشجر',
-'تراكب',
-'تعبئة',
-'الشحن',
-'تمشيط',
-'توصيل',
-'أعضاء',
-'رقيقة',
-'تجانس',
-'تلميذ',
-'تطبيق',
-'توظيف',
-'توافق',
-'تفخيم',
-'تكاثف',
-'الجهر',
-'تدليك',
-'تباهى',
-'تراكم',
-'تبخير',
-'تخويف',
-'تقسيم',
-'تشابل',
-'السحق',
-'تلوين',
-'ترسيم',
-'الشحي',
-'تعرية',
-'الشحم',
-'تبجيل',
-'أفراد',
-'رهينة',
-'رامين',
-'أسماك',
-'توقيع',
-'أعصاب',
-'تسابق',
-'تسويق',
-'تحريم',
-'الفصة',
-'تجليد',
-'تسهيل',
-'أصالة',
-'ترخيص',
-'ترحيل',
-'تراقب',
-'تهديم',
-'أفراح',
-'توكيد',
-'تشويق',
-'تعافى',
-'رائجة',
-'الشبل',
-'تخاطر',
-'الجهد',
-'الغرف',
-'تلميح',
-'رطوبة',
-'الفصح',
-'ترقية',
-'الفضة',
-'تكافؤ',
-'أطعمة',
-'أصابع',
-'تناقش',
-'تطبيع',
-'تلويث',
-'ترجمة',
-'أحباء',
-'ترقيع',
-'توكيل',
-'ركنية',
-'تعاون',
-'رقابة',
-'تجاوب',
-'راوية',
-'تواكب',
-'تباين',
-'الفزع',
-'تطاول',
-'الغرض',
-'تشويه',
-'تجاوز',
-'رايات',
-'رئيسة',
-'تهذيب',
-'الفعل',
-'الفصل',
-'تقييم',
-'الفضل',
-'رياضة',
-'السحب',
-'تعايش',
-'رائدة',
-'تسوية',
-'تقرير',
-'راندا',
-'أسماء',
-'تخاطب',
-'أبحاث',
-'أحباب',
-'تدليس',
-'تدقيق',
-'تساؤل',
-'رقاقة',
-'الفرو',
-'تكاثر',
-'الغزل',
-'رئيسى',
-'الغرق',
-'تخمين',
-'تحريف',
-'تجاهل',
-'الجنس',
-'تقارب',
-'رمضان',
-'الجهة',
-'تحقيق',
-'تداعي',
-'الغرس',
-'رهيبة',
-'تنظيم',
-'السحر',
-'الفشل',
-'ترحيب',
-'رضاعة',
-'أراضي',
-'تناقض',
-'رائعة',
-'رائدا',
-'رائعا',
-'أفخاذ',
-'أطراف',
-'ترقوة',
-'رماية',
-'تراني',
-'الشبه',
-'توطين',
-'روائع',
-'توقيف',
-'رواجا',
-'أجانب',
-'ترانس',
-'الشخص',
-'تشريف',
-'تشاؤم',
-'أفران',
-'أشباح',
-'تعامل',
-'توضيح',
-'تحجيم',
-'الشحر',
-'السجق',
-'السجل',
-'تدافع',
-'توعية',
-'تسارع',
-'أبريل',
-'تعاود',
-'تلفاز',
-'تباعد',
-'تشويش',
-'تناقص',
-'تقييد',
-'أسلوب',
-'رائحة',
-'ترتيل'
+  'أباظة',
+  'أبجدي',
+  'أبحاث',
+  'أبخرة',
+  'أبدية',
+  'أبراج',
+  'أبرهة',
+  'أبريل',
+  'أبزاخ',
+  'أبطال',
+  'أبعاد',
+  'أبقار',
+  'أبكار',
+  'أبناء',
+  'أبنية',
+  'أبواب',
+  'أبولو',
+  'أبوية',
+  'أبيات',
+  'أتاري',
+  'أتباع',
+  'أتراك',
+  'أتمتة',
+  'أثرية',
+  'أثقال',
+  'أثمان',
+  'أثناء',
+  'أجانب',
+  'أجبان',
+  'أجداد',
+  'أجزاء',
+  'أجساد',
+  'أجسام',
+  'أجمية',
+  'أجناد',
+  'أجناس',
+  'أجنبي',
+  'أجنحة',
+  'أجندة',
+  'أجنيس',
+  'أجهزة',
+  'أجواء',
+  'أجوبة',
+  'أجياد',
+  'أجيال',
+  'أحادي',
+  'أحباء',
+  'أحباب',
+  'أحبار',
+  'أحجار',
+  'أحجام',
+  'أحجية',
+  'أحداث',
+  'أحذية',
+  'أحرار',
+  'أحراش',
+  'أحزاب',
+  'أحزان',
+  'أحزمة',
+  'أحسنت',
+  'أحشاء',
+  'أحصنة',
+  'أحضان',
+  'أحفاد',
+  'أحقية',
+  'أحكام',
+  'أحلام',
+  'أحماض',
+  'أحمال',
+  'أحمدي',
+  'أحناف',
+  'أحواز',
+  'أحواش',
+  'أحواض',
+  'أحوال',
+  'أحياء',
+  'أحيان',
+  'أخبار',
+  'أختام',
+  'أخشاب',
+  'أخطاء',
+  'أخطار',
+  'أخلاق',
+  'أخماس',
+  'أخميم',
+  'أخوات',
+  'أخيرا',
+  'أدراج',
+  'أدرار',
+  'أدعية',
+  'أدغال',
+  'أدمغة',
+  'أدوات',
+  'أدوار',
+  'أدوية',
+  'أديان',
+  'أديبا',
+  'أديبة',
+  'أديرة',
+  'أذواق',
+  'أراضى',
+  'أرانب',
+  'أرباح',
+  'أرباع',
+  'أربطة',
+  'أربعة',
+  'أربية',
+  'أربيل',
+  'أرجاء',
+  'أرجان',
+  'أرشفة',
+  'أرشيف',
+  'أرصاد',
+  'أرصدة',
+  'أرصفة',
+  'أرطال',
+  'أرقام',
+  'أركان',
+  'أرملة',
+  'أرواح',
+  'أرواد',
+  'أروبا',
+  'أروقة',
+  'أرياف',
+  'أريان',
+  'أريكة',
+  'أزدية',
+  'أزلية',
+  'أزمات',
+  'أزمنة',
+  'أزمير',
+  'أزهار',
+  'أزهري',
+  'أزواج',
+  'أزواد',
+  'أزياء',
+  'أسئلة',
+  'أساسا',
+  'أسبوع',
+  'أستاذ',
+  'أسراب',
+  'أسرار',
+  'أسطول',
+  'أسعار',
+  'أسفار',
+  'أسفله',
+  'أسلاف',
+  'أسلاك',
+  'أسلام',
+  'أسلحة',
+  'أسلمة',
+  'أسلوب',
+  'أسلية',
+  'أسماء',
+  'أسماك',
+  'أسمدة',
+  'أسنان',
+  'أسوار',
+  'أسواق',
+  'أسوان',
+  'أسياد',
+  'أسيرة',
+  'أشباح',
+  'أشبال',
+  'أشباه',
+  'أشجار',
+  'أشخاص',
+  'أشرار',
+  'أشراف',
+  'أشرطة',
+  'أشرعة',
+  'أشغال',
+  'أشقاء',
+  'أشكال',
+  'أشلاء',
+  'أشواط',
+  'أشواك',
+  'أشياء',
+  'أصالة',
+  'أصباغ',
+  'أصحاب',
+  'أصداء',
+  'أصدار',
+  'أصداف',
+  'أصقاع',
+  'أصلاب',
+  'أصلية',
+  'أصناف',
+  'أصوات',
+  'أصيلة',
+  'أضرار',
+  'أضرحة',
+  'أضعاف',
+  'أضلاع',
+  'أضواء',
+  'أطباء',
+  'أطباق',
+  'أطراف',
+  'أطعمة',
+  'أطفال',
+  'أطلال',
+  'أطماع',
+  'أطنان',
+  'أطوار',
+  'أطوال',
+  'أطياف',
+  'أظافر',
+  'أعالي',
+  'أعباء',
+  'أعتاب',
+  'أعراض',
+  'أعراف',
+  'أعراق',
+  'أعزاز',
+  'أعشاب',
+  'أعشاش',
+  'أعصاب',
+  'أعضاء',
+  'أعطال',
+  'أعلاف',
+  'أعمار',
+  'أعماق',
+  'أعمال',
+  'أعمام',
+  'أعمدة',
+  'أعناق',
+  'أعواد',
+  'أعوام',
+  'أعوان',
+  'أعياد',
+  'أعيان',
+  'أغانى',
+  'أغذية',
+  'أغراض',
+  'أغسطس',
+  'أغصان',
+  'أغطية',
+  'أغلبه',
+  'أغلفة',
+  'أغنام',
+  'أغنية',
+  'أفاضل',
+  'أفاعي',
+  'أفخاذ',
+  'أفراح',
+  'أفراد',
+  'أفراس',
+  'أفرام',
+  'أفران',
+  'أفغان',
+  'أفكار',
+  'أفلاك',
+  'أفلام',
+  'أفنان',
+  'أفندى',
+  'أفواج',
+  'أفواه',
+  'أفيال',
+  'أقارب',
+  'أقاصي',
+  'أقباط',
+  'أقداد',
+  'أقران',
+  'أقزام',
+  'أقساط',
+  'أقسام',
+  'أقضية',
+  'أقطاب',
+  'أقطار',
+  'أقفال',
+  'أقلام',
+  'أقلية',
+  'أقمار',
+  'أقمشة',
+  'أقنعة',
+  'أقواس',
+  'أقوال',
+  'أقوام',
+  'أكابر',
+  'أكسيد',
+  'أكشاك',
+  'أكلات',
+  'أكمام',
+  'أكواب',
+  'أكواخ',
+  'أكواد',
+  'أكوام',
+  'أكياس',
+  'ألبان',
+  'ألبسة',
+  'ألبوم',
+  'ألسنة',
+  'ألغاز',
+  'ألغام',
+  'ألفاظ',
+  'ألفية',
+  'ألفين',
+  'ألواح',
+  'ألوان',
+  'ألوية',
+  'أليفة',
+  'أمارة',
+  'أماكن',
+  'أمالي',
+  'أمانة',
+  'أمتار',
+  'أمتعة',
+  'أمثال',
+  'أمثلة',
+  'أمجاد',
+  'أمسية',
+  'أمطار',
+  'أمعاء',
+  'أمراض',
+  'ألماس',
+  'ألمان',
+  'أملاح',
+  'أملاك',
+  'أمهات',
+  'أموات',
+  'أمواج',
+  'أموال',
+  'أمورا',
+  'أميال',
+  'أميرة',
+  'أنحاء',
+  'أنسجة',
+  'أنصار',
+  'أنصاف',
+  'أنظمة',
+  'أنعام',
+  'أنغام',
+  'أنفاس',
+  'أنفية',
+  'أنقاض',
+  'أنمار',
+  'أنماط',
+  'أنهار',
+  'أنوار',
+  'أنواع',
+  'أنوال',
+  'أنوية',
+  'أنياب',
+  'أهالى',
+  'أهداب',
+  'أهداف',
+  'أهراس',
+  'أهرام',
+  'أهوار',
+  'أهوال',
+  'أوائل',
+  'أواخر',
+  'أواسط',
+  'أواصر',
+  'أوامر',
+  'أوبئة',
+  'أوبرا',
+  'أوجاع',
+  'أوجان',
+  'أودية',
+  'أوراق',
+  'أورام',
+  'أوردة',
+  'أوزان',
+  'أوساط',
+  'أوسان',
+  'أوسمة',
+  'أوصاف',
+  'أوضاع',
+  'أوعية',
+  'أوقات',
+  'أوقاف',
+  'أوقية',
+  'أولاد',
+  'أوهام',
+  'أيتام',
+  'أيلول',
+  'أڤتار',
+  'بادية',
+  'بارجة',
+  'بارزة',
+  'بارعا',
+  'بارعة',
+  'بارود',
+  'بازار',
+  'باطلة',
+  'باكرة',
+  'بائسة',
+  'بائعة',
+  'بالسل',
+  'باهرة',
+  'باهظة',
+  'بايعه',
+  'ببغاء',
+  'بخارى',
+  'بحيرة',
+  'بدائل',
+  'بدائى',
+  'بداية',
+  'بذيئة',
+  'برامج',
+  'برغوث',
+  'بركان',
+  'برمجة',
+  'برلين',
+  'برميل',
+  'برهان',
+  'بريمة',
+  'بساطة',
+  'بسائل',
+  'بسالة',
+  'بستان',
+  'بسيطة',
+  'بشائر',
+  'بشارة',
+  'بشاعة',
+  'بصلية',
+  'بصمات',
+  'بضائع',
+  'بضاعة',
+  'بطاطا',
+  'بطاطس',
+  'بطاقة',
+  'بطالة',
+  'بطانة',
+  'بطلات',
+  'بقالة',
+  'بقايا',
+  'بقشيش',
+  'بكارة',
+  'بكرات',
+  'بلاغة',
+  'بلوتو',
+  'بواخر',
+  'بوادر',
+  'بوذية',
+  'بورصة',
+  'بوليس',
+  'بيادق',
+  'بيئية',
+  'بيضاء',
+  'بيطرى',
+  'بيوتا',
 ]
+
+const DictLength = ArabicWords.length
+function Timer ()
+{
+
+}
+
+function SearchDict(word)
+{
+  for (let i=0; i<DictLength; i++)
+  {
+    if (ArabicWords[i]==word)
+      return true
+  }
+  return false
+}
 
 document.addEventListener("DOMContentLoaded",()=>
 {
-
 
 
 if (localStorage.userwords === undefined )
@@ -242,46 +483,51 @@ if (localStorage.userwords === undefined )
   localStorage.setItem('row',0)
 }
 
-
 else
 {
 
   let  TypedWords  = JSON.parse(localStorage.getItem('userwords'));
   let  Evaluations = JSON.parse(localStorage.getItem('evaluations'));
-  for (let row =0; row<TypedWords.length; row++)
+  for (let row =0; row < TypedWords.length; row++)
   {
-    let Row = Object.values(document.querySelector(`.row${row}`).getElementsByTagName("input")).reverse()  
-    for (let letter =0; letter<5; letter++)
+    let Row = document.querySelector(`.row${row}`).getElementsByTagName("input")
+    let letter = 0
+    for (let column =4; column>=0; column--)
     {
-      Row[letter].value = TypedWords[row][letter]
-      Row[letter].style.backgroundColor = Evaluations[row][letter]
+      Row[column].value = TypedWords[row][letter]
+      Row[column].style.backgroundColor = Evaluations[row][letter]
+      letter++
     }
   }
  
 }
 
-  
-  let current_row =  Number(localStorage.row) ;
-  let current_position =0;
   const WordForToday = ArabicWords[80]
-  
+  let RowWord = []
+  let current_row =  Number(localStorage.row) ;
+  let current_position = 0;
+
+
   AraicOnlyPattern=/^[\u0621-\u064A]+$/
 
   document.addEventListener("keypress",e=>{
     if (current_position <=4   && current_row <=5 && localStorage.gamestatus =="playing")
     {
+ 
       let CurrentLetter =  document.getElementById(`row${current_row}_letter${current_position}`); 
       if(AraicOnlyPattern.test(e.key))
       {
         if (CurrentLetter.value =="")
-        { CurrentLetter.value= e.key}
+        {
+          RowWord.push(e.key)
+          CurrentLetter.value= e.key
+        }
           current_position++;
       }
-
   }
 
-})
-  
+ })
+
 
 document.addEventListener("keydown",e=>{
 
@@ -289,6 +535,7 @@ document.addEventListener("keydown",e=>{
   {
     current_position--;  
     document.getElementById(`row${current_row}_letter${current_position}`).value="";
+    RowWord.pop()
   }
 
 
@@ -296,84 +543,93 @@ document.addEventListener("keydown",e=>{
   // checking the user's word after pressing Enter key
   if (e.key=="Enter" && current_position===5 && current_row <=5   && localStorage.gamestatus =="playing")
   {
-    // TypedWords:["word1","wrod2",..]
-    let current_evaluations = JSON.parse(localStorage.getItem('evaluations'));
 
-    let TypedWord=""
-    let correct_letters =0 
-  
-    const CurrentRowLetters = Object.values(document.querySelector(`.row${current_row}`).getElementsByTagName("input")).reverse()  
-    let UserLetters=  []
-    let ValidWord =  [...WordForToday]
-  
-    current_position=0;
-
- 
-    for (let i =0;i<5;i++)
-    {
-      UserLetters.push(CurrentRowLetters[i].value)
-      TypedWord += CurrentRowLetters[i].value
-      
-      if (UserLetters[i] == ValidWord[i])
-        {
-          CurrentRowLetters[i].style.backgroundColor= "green"
-          current_evaluations[current_row][i] = "green"
-          UserLetters[i] = "-"
-          ValidWord[i] ="_"
-          correct_letters++
-        }
-    }
-
+    const RowWordString =RowWord.join('')
+    let ValidWord = [...WordForToday]
     
-      if (correct_letters==5 || current_row==5)
-      {    
-        
-        localStorage.playscount = Number(localStorage.playscount) + 1;
+    const CurrentRowLetters = Object.values(document.querySelector(`.row${current_row}`).getElementsByTagName("input")).reverse()  
+
+    if (SearchDict(RowWordString))
+    {
       
-        if (correct_letters==5)
-        {
-          localStorage.setItem("gamestatus","WINNER")
-        }
-        else
-        {
-          localStorage.setItem("gamestatus","LOSER")
-        }
+      let current_evaluations = JSON.parse(localStorage.getItem('evaluations'));
+      let correct_letters =0      
+      current_position=0;
+
+      for (let i =0;i<5;i++)
+      {
+   
+        if (RowWord[i] == ValidWord[i])
+          {
+            CurrentRowLetters[i].style.backgroundColor= "green"
+            current_evaluations[current_row][i] = "green"
+            RowWord[i] = "-"
+            ValidWord[i] ="_"
+            correct_letters++
+          }
       }
 
- 
-        OuterLoop:
-        for(let i = 0;i<5;i++)
-        {
-          if (UserLetters[i] =="-")
-          continue
-          
-          for(let j = 0;j<5;j++)
-          {
-              if (UserLetters[i]==ValidWord[j])
-              {
-                CurrentRowLetters[i].style.backgroundColor = "#C9B558"
-                current_evaluations[current_row][i] = "#C9B558"
-                ValidWord[j] = "_"
-                continue OuterLoop
-              }
-          }
-          CurrentRowLetters[i].style.backgroundColor = "#3A3A3C"
-          current_evaluations[current_row][i] = "#3A3A3C"
-        }
       
+        if (correct_letters==5 || current_row==5)
+        {    
+          
+          localStorage.playscount = Number(localStorage.playscount) + 1;
+        
+          if (correct_letters==5)
+          {
+            localStorage.setItem("gamestatus","WINNER")
+          }
+          else
+          {
+            localStorage.setItem("gamestatus","LOSER")
+          }
+        }
+          if (correct_letters<5)
+          {
 
-      current_row ++;
-      localStorage.row = Number(localStorage.row) + 1;
-      userwords = JSON.parse(localStorage.getItem('userwords'));
-      userwords.push(TypedWord);
-      localStorage.setItem('userwords', JSON.stringify(userwords));
-      localStorage.setItem('evaluations', JSON.stringify(current_evaluations));
+            OuterLoop:
+            for(let i = 0;i<5;i++)
+            {
+              if (RowWord[i] =="-")
+              continue
+              
+              for(let j = 0;j<5;j++)
+              {
+                  if (RowWord[i]==ValidWord[j])
+                  {
+                    CurrentRowLetters[i].style.backgroundColor = "#C9B558"
+                    current_evaluations[current_row][i] = "#C9B558"
+                    ValidWord[j] = "_"
+                    continue OuterLoop
+                  }
+              }
+              CurrentRowLetters[i].style.backgroundColor = "#3A3A3C"
+              current_evaluations[current_row][i] = "#3A3A3C"
+            }
+
+        }
+        
+        RowWord=[]
+        ValidWord = []
+        current_row ++;
+        localStorage.row = Number(localStorage.row) + 1;
+        userwords = JSON.parse(localStorage.getItem('userwords'));
+        userwords.push(RowWordString);
+        localStorage.setItem('userwords', JSON.stringify(userwords));
+        localStorage.setItem('evaluations', JSON.stringify(current_evaluations));
+    }
+    else
+    {
+      alert("not in the words list")
+    }
+
+  
+  
   }
 
 
-
-
 })
+
 
 
 

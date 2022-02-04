@@ -3,13 +3,15 @@
 body
 {
   background-color: black;
+  color: aliceblue;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 
 .title
 {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
   margin:10px;
-  color: aliceblue;
   font-size: 1cm;
  
   hr{
@@ -21,10 +23,9 @@ body
 }
 
 
-
-
 .GameBoard
 {
+
   .game_row
   {
     input
@@ -40,4 +41,21 @@ body
     }
 
   }
+}
+
+
+.notes
+{
+  
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width:500px;
+  display: flex;
+  flex-direction: column;
+
+  font-size: large;
+ p{
+  font-size: medium;
+ }
 }

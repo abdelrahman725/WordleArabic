@@ -4,12 +4,12 @@
 
 body {
   background-color: black;
+  color: aliceblue;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .title {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin: 10px;
-  color: aliceblue;
   font-size: 1cm;
 }
 
@@ -29,5 +29,24 @@ body {
   color: white;
   border: 1.5px solid #434343;
   background-color: black;
+}
+
+.notes {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: large;
+}
+
+.notes p {
+  font-size: medium;
 }
 /*# sourceMappingURL=styles.css.map */
