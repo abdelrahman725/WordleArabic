@@ -10,7 +10,7 @@ const ArabicWords = [
   'أبزاخ',
   'أبطال',
   'أبعاد',
-  'أبقار',
+  'أقمار',
   'أبكار',
   'أبناء',
   'أبنية',
@@ -272,8 +272,9 @@ const ArabicWords = [
   'أقفال',
   'أقلام',
   'أقلية',
-  'أقمار',
   'أقمشة',
+  'أبصار',
+  'أبقار',
   'أقنعة',
   'أقواس',
   'أقوال',
@@ -926,6 +927,8 @@ const ArabicWords = [
   'ثورات',
   'ثورية',
   'جائحة',
+  'تبويب',
+  'تبطيل',
 'جائرة',
 'جائزة',
 'جاذبة',
@@ -1024,10 +1027,169 @@ const ArabicWords = [
 'جوفية',
 'جولات',
 'جوهرة',
-'جيبية'
+'جيبية',
+'حائرة',
+'حائزة',
+'حاجات',
+'حادثة',
+'حارثة',
+'حارسا',
+'حارسة',
+'حارقة',
+'حازمة',
+'حاسبة',
+'حاسبة',
+'حاسما',
+'حاسمة',
+'حاسوب',
+'حاشدة',
+'حاشية',
+'حاصلة',
+'حاضرا',
+'حاضرة',
+'حاضنة',
+'حافظا',
+'حافظة',
+'حافلة',
+'حاكما',
+'حاكمة',
+'حالات',
+'حاليا',
+'حالية',
+'حاملة',
+'حامية',
+'حانات',
+'حانوت',
+'حاوية',
+'حبيبة',
+'حبيسة',
+'حبيسة',
+'حتمية',
+'حثيثة',
+'حجارة',
+'حجرات',
+'حجرية',
+'حجيرة',
+'حدائق',
+'حداثة',
+'حدادة',
+'حدباء',
+'حدسية',
+'حديقة',
+'حرائق',
+'حراثة',
+'حرارة',
+'حراسة',
+'حراشف',
+'حرامي',
+'حرباء',
+'حرجية',
+'حرفيا',
+'حرفية',
+'حركية',
+'حريضة',
+'حزبية',
+'حزينة',
+'حسابا',
+'حساسة',
+'حسناء',
+'حسنات',
+'حسونة',
+'حشائش',
+'حشرات',
+'حشرية',
+'حشوات',
+'حشيشة',
+'حصانة',
+'حصرية',
+'حصولة',
+'حصوله',
+'حصيرة',
+'حصيلة',
+'حصينة',
+'حضارة',
+'حضارم',
+'حضاري',
+'حضانة',
+'حضرية',
+'حظائر',
+'حظيرة',
+'حفارة',
+'حفاظا',
+'حقائب',
+'حقائق',
+'حقوقا',
+'حقيبة',
+'حقيقة',
+'حقيقى',
+'حكايا',
+'حكاية',
+'حكماء',
+'حكومة',
+'حكيمة',
+'حلاقة',
+'حلاوة',
+'حلايب',
+'حلبات',
+'حلبجة',
+'حلبية',
+'حلحلة',
+'حلحول',
+'حلزون',
+'حلفاء',
+'حلقات',
+'حلوان',
+'حليفة',
+'حليمة',
+'حمادى',
+'حماسة',
+'حماقة',
+'حمالة',
+'حمامة',
+'حماية',
+'حمراء',
+'حموضة',
+'حموضة',
+'حمولة',
+'حميدة',
+'حميمة',
+'حنجرة',
+'حنفية',
+'حنيفة',
+'حوائج',
+'حوائط',
+'حواجز',
+'حوادث',
+'حوارا',
+'حوارة',
+'حواري',
+'حواسب',
+'حواشي',
+'حواضر',
+'حوافز',
+'حوالة',
+'حوامة',
+'حوامل',
+'حورية',
+'حوسبة',
+'حولية',
+'حويجة',
+'حويرة',
+'حيازة',
+'حياكة',
+'حيتان',
+'حيوان',
+'حيوات',
+'حيوية',
+'حالمة',
+'حاقدة',
+'حاشدة',
+'حامدة',
+'حانقة'
 ]
 
 const DictLength = ArabicWords.length
+
 function Alerting(msg)
 {
   let AlertBox = document.getElementById("alerting")
@@ -1039,45 +1201,54 @@ function Alerting(msg)
 
 }
 
-
 function TimeLeft()
 {
+
   let timer = document.getElementById("timer");
   const Intervalfunction = setInterval(Countdown, 1000);
+
   
   function Countdown()
   {
-
+    
   let CurenTime = new Date();
-  let  EndTime = new Date(CurenTime.getFullYear(),CurenTime.getMonth(), CurenTime.getDay()+1); 
-  const diff = (EndTime-CurenTime)/1000/60/60
-  const hours   =  diff-24
-  const secondsleft = diff * 3600
+  let  EndTime = new Date(CurenTime.getFullYear(),CurenTime.getMonth(), CurenTime.getDate(),24); 
+  const hours = (EndTime-CurenTime)/1000/60/60
   const minutes = (hours- Math.floor(hours)) * 60
   const seconds = (minutes-Math.floor(minutes))*60
-  timer.innerHTML = `0${Math.trunc(hours)}:${Math.trunc(minutes)}:${Math.trunc(seconds)}`;
-  if (secondsleft==0)
+  let h=""
+  let m=""
+  let s=""
+  if (hours<10)
+  {
+    h="0"
+  }
+  if (minutes <10)
+  {
+    m="0"
+  }
+  if (seconds < 10)
+  {
+    s="0"
+  }
+  timer.innerHTML = `${h}${Math.trunc(hours)}:${m}${Math.trunc(minutes)}:${s}${Math.trunc(seconds)}`;
+  if (hours/1000 ==0)
   {
     clearInterval(Intervalfunction)
   }
-
+ 
 }
 
 
-
 }
-function Check()
-{
-
-  // let StartedDate = new Date("2022-02-4")
-  // let date = new Date()
-  // let CurrentTime = new Date()
-  // let diff = Math.abs(StartedDate - CurrentTime)
-  // let dayscount = Math.ceil(diff/ (1000 * 60 * 60 * 24))
+function NumberOfDays()
+{ 
+  let StartedDate = new Date(2022,1,4)
+  let CurrentTime = new Date()
+  let diff = Math.abs(CurrentTime-StartedDate)
+  let dayscount = Math.floor(diff/ (1000 * 60 * 60 * 24))
+  return dayscount;
 }
-
-
-
 
 function SearchDict(word)
 {
@@ -1097,26 +1268,25 @@ function ShowPanel(state)
 
     document.getElementById("status").innerHTML = "أحسنت"
   }
-  else
+  if (state=="LOSER")
   {
     document.getElementById("status").innerHTML = "حاول المرة القادمة"
   }
-  setTimeout(()=>{
-    document.querySelector(".panel").style.display = "block"
-    document.querySelector(".GameBoard").style.opacity = "60%"
-    document.querySelector(".title").style.opacity = "60%"
-  },1000)
+  if (state !="playing")
+  {
+
+    setTimeout(()=>{
+      document.querySelector(".panel").style.display = "block"
+      document.querySelector(".GameBoard").style.opacity = "60%"
+      document.querySelector(".title").style.opacity = "60%"
+    },1000)
+    TimeLeft()
+  }
+
 }
 
-
-
-document.addEventListener("DOMContentLoaded",()=>
+function RestartGame()
 {
-
-
-if (localStorage.userwords === undefined )
-{
-
   let initial_evaluations =[[],[],[],[],[],[]]
   for (let row =0; row<6; row++)
   {
@@ -1128,39 +1298,61 @@ if (localStorage.userwords === undefined )
 
   localStorage.setItem('evaluations',JSON.stringify(initial_evaluations))
   localStorage.setItem('userwords',JSON.stringify([]))
-  localStorage.setItem('playscount',0)
   localStorage.setItem('gamestatus',"playing")
   localStorage.setItem('row',0)
+  localStorage.setItem('word',ArabicWords[NumberOfDays()])
 }
 
+
+document.addEventListener("DOMContentLoaded",()=>
+{
+
+  console.log(ArabicWords[NumberOfDays()])
+  console.log(NumberOfDays())
+
+// first visit from the user
+if (localStorage.userwords === undefined )
+{
+  localStorage.setItem('playscount',0)
+  RestartGame()
+}
+
+
+// subsequential visits
 else
 {
- 
-  let status = localStorage.getItem("gamestatus")
-  if (status !=="playing")
-  {
-      Check()
-      TimeLeft()  
-      ShowPanel(status)
-  }
 
-
-  let  TypedWords  = JSON.parse(localStorage.getItem('userwords'));
-  let  Evaluations = JSON.parse(localStorage.getItem('evaluations'));
-  for (let row =0; row < TypedWords.length; row++)
+  // check first if it is  the same day
+  if (localStorage.word === ArabicWords[NumberOfDays()])
   {
-    let Row = document.querySelector(`.row${row}`).getElementsByTagName("input")
-    let letter = 0
-    for (let column =4; column>=0; column--)
+    // filling previous played positions whether user is still playing or has finished
+    let  TypedWords  = JSON.parse(localStorage.getItem('userwords'));
+    let  Evaluations = JSON.parse(localStorage.getItem('evaluations'));
+    for (let row =0; row < TypedWords.length; row++)
     {
-      Row[column].value = TypedWords[row][letter]
-      Row[column].style.backgroundColor = Evaluations[row][letter]
-      letter++
+      let Row = document.querySelector(`.row${row}`).getElementsByTagName("input")
+      let letter = 0
+      for (let column =4; column>=0; column--)
+      {
+        Row[column].value = TypedWords[row][letter]
+        Row[column].style.backgroundColor = Evaluations[row][letter]
+        letter++
+      }
     }
+    ShowPanel(localStorage.getItem('gamestatus'))
+
   }
- 
+  // it is  a new day (a new wordle)
+  else
+  {
+    RestartGame()
+  }
+
+
+  
 }
-// closing panel
+
+// closing panel when user clicks close
 document.querySelector("i").addEventListener("click",()=>{
   document.querySelector(".GameBoard").style.opacity = "100%"
   document.querySelector(".title").style.opacity = "100%"
@@ -1168,7 +1360,7 @@ document.querySelector("i").addEventListener("click",()=>{
 
 })
 
-  const WordForToday = ArabicWords[80]
+  const WordForToday = localStorage.getItem('word')
   let RowWord = []
   let current_row =  Number(localStorage.row) ;
   let current_position = 0;
@@ -1205,7 +1397,6 @@ document.addEventListener("keydown",e=>{
     RowWord.pop()
   }
 
-
   
   // checking the user's word after pressing Enter key
   if (e.key=="Enter" && current_position===5 && current_row <=5   && localStorage.gamestatus =="playing")
@@ -1236,7 +1427,6 @@ document.addEventListener("keydown",e=>{
           }
       }
 
-      
         if (correct_letters==5 || current_row==5)
         {    
           
@@ -1252,8 +1442,6 @@ document.addEventListener("keydown",e=>{
             localStorage.setItem("gamestatus","LOSER")
            ShowPanel("LOSER")
           }
-          TimeLeft()
-     
         }
          
             OuterLoop:
@@ -1283,7 +1471,6 @@ document.addEventListener("keydown",e=>{
         current_row ++;
         localStorage.row = Number(localStorage.row) + 1;
         let userwords = JSON.parse(localStorage.getItem('userwords'));
-        console.log(RowWordString)
         userwords.push(RowWordString);
         localStorage.setItem('userwords', JSON.stringify(userwords));
         localStorage.setItem('evaluations', JSON.stringify(current_evaluations));
