@@ -72,11 +72,7 @@ body {
   font-size: large;
 }
 
-.panel #status {
-  font-size: 0.8cm;
-}
-
-.panel #timer {
+.panel #timer, .panel #status {
   font-size: 0.8cm;
 }
 

@@ -68,16 +68,11 @@ body
   }
   i:hover { cursor: pointer;}
   
-  p{  font-size: large;}
-  #status
-  {
-    font-size: 0.8cm;
-  }
-  #timer
-  {
-    font-size: 0.8cm;
-  
-  }
+  p{  font-size: large;  }
+
+  #timer,#status
+  {font-size: 0.8cm;}
+
 }
 .GameBoard
 {  
