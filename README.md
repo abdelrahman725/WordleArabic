@@ -4,7 +4,7 @@
 
 for simplicity words include only nouns and subjects (male or female) (singular or plural).
 
-pronouns in verbs are not included.
+pronouns are excluded
 
 words only contain basic arabic letters so there is no tanwen or shada
 ## عربى
