@@ -2573,6 +2573,10 @@ document.addEventListener("keydown",e=>{
            ShowPanel("LOSER")
           }
         }
+        // if (correct_letters!=5)
+        // {
+
+        // }
          
           OuterLoop:
           for(let i = 0;i<5;i++)
