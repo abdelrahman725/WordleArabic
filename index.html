@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,19 +23,29 @@
 <div id="alerting"></div>
 
 <div class="panel">
- 
-    <i class="material-icons">&#xe5cd;</i>
+    <i id ="close_panel" class="close material-icons">&#xe5cd;</i>
     <p id="status"></p>
 
     <p id="answer" hidden>
     الإجابة : 
-      <strong></strong>
+    <strong></strong>
     </p>
-
     <br>
     <p>الكلمة التالية بعد</p>
     <div id="timer"></div>
+</div>
 
+<div class="info_panel">
+  <i id="close_info" class="close material-icons">&#xe5cd;</i>
+
+  <p class="title_info">
+    Wordle النسخة العربية من اللعبة المشهورة
+  </p>
+  <br>
+  <div class="info_text_container">
+    <p>لتبسيط اللعب جرب فقط أسماء وصفات حيث أن الأفعال والضمائر مستبعدة</p>
+    <p>جميع علامات التشكيل مستبعدة</p>
+  </div>
 </div>
 
 
@@ -48,7 +58,6 @@
    <input id="row0_letter1"  type="text" maxlength="1" autocomplete="off"  disabled="true">
    <input id="row0_letter0"  type="text" maxlength="1" autocomplete="off"  disabled="true">
  </div>
-
 
   <div class="game_row row1">
    <input id="row1_letter4"  type="text" maxlength="1" autocomplete="off"  disabled="true">
@@ -85,8 +94,11 @@
    <input id="row5_letter1"  type="text" maxlength="1" autocomplete="off"  disabled="true">
    <input id="row5_letter0"  type="text" maxlength="1" autocomplete="off"  disabled="true">
  </div>
-
 </div>
+
+
+<i id ="info"class="material-icons">info_outline</i>
+
 </div>
 </body>
 </html>

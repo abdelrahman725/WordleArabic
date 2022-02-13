@@ -733,6 +733,7 @@ const ArabicWords = {
     'تفاضل',
     'تفاعل',
     'تفاقم',
+    'تعامل',
     'تفاهم',
     'تفاوت',
     'تفاوض',
@@ -1303,7 +1304,8 @@ const ArabicWords = {
   'خيالي',
   'خيانة',
   'خيرية'],
-  'د':['دائرة',
+  'د':
+  ['دائرة',
   'دائرى',
   'دائما',
   'دائمة',
@@ -2320,8 +2322,37 @@ const ArabicWords = {
 function Alerting(msg)
 {
   let AlertBox = document.getElementById("alerting")
-  AlertBox.style.visibility="visible"
+ 
+  if (msg===0)
+  {
+    msg = "مستحيل انت عبقرى"
+  }
+  if (msg===1)
+  {
+    msg = "هل لديك قدرة خارقة؟"
+  }
+  if (msg===2)
+  {
+    msg = "عظيم"
+  }
+
+  if (msg===3)
+  {
+    msg = "عمل جيد"
+  }
+
+  if (msg===4)
+  {
+    msg = "لست سيئا"
+  }
+
+  if (msg===5)
+  {
+    msg = "أوه، كان هذا وشيكا"
+  }
+
   AlertBox.innerHTML = msg
+  AlertBox.style.visibility="visible"
   setTimeout(()=>{
    AlertBox.style.visibility="hidden"
   },2000)
@@ -2393,6 +2424,20 @@ function SearchDict(word)
   return false
 }
 
+function BackgroundOpacity(state)
+{
+  if (state=="fade")
+  {
+    document.querySelector(".GameBoard").style.opacity = "60%"
+    document.querySelector(".title").style.opacity = "60%"
+  }
+  if (state=="reset")
+  {
+    document.querySelector(".GameBoard").style.opacity = "100%"
+    document.querySelector(".title").style.opacity = "100%"
+  }
+
+}
 function ShowPanel(state)
 {
   
@@ -2409,11 +2454,9 @@ function ShowPanel(state)
   }
   if (state !="playing")
   {
-
     setTimeout(()=>{
       document.querySelector(".panel").style.display = "block"
-      document.querySelector(".GameBoard").style.opacity = "60%"
-      document.querySelector(".title").style.opacity = "60%"
+      BackgroundOpacity("fade")
     },1000)
     TimeLeft()
   }
@@ -2478,17 +2521,42 @@ else
   else
   {
     RestartGame()
-  }
-  
+  } 
 }
 
-// closing panel when user clicks close
-document.querySelector("i").addEventListener("click",()=>{
-  document.querySelector(".GameBoard").style.opacity = "100%"
-  document.querySelector(".title").style.opacity = "100%"
-  document.querySelector(".panel").style.display = "none"
+let Info=document.getElementById("info")
+let Panel = document.querySelector(".panel")
+let InfoPanel = document.querySelector(".info_panel")
+
+// showing information panel when user clicks on info icon
+Info.addEventListener("click",()=>{
+  BackgroundOpacity("fade")
+  Panel.style.display = "none"
+  InfoPanel.style.display = "block"
+})
+
+// closing panels when user explicitly clicks on close icon
+document.getElementById("close_panel").addEventListener("click",()=>{
+  BackgroundOpacity("reset")
+  Panel.style.display = "none"
 
 })
+document.getElementById("close_info").addEventListener("click",()=>{
+  BackgroundOpacity("reset")
+  InfoPanel.style.display = "none"
+})
+
+
+// closing any opened window when user clicks anywhere outside it 
+document.addEventListener("click",(e)=>{
+  if(!Info.contains(e.target) && !Panel.contains(e.target) && !InfoPanel.contains(e.target))
+  {
+    BackgroundOpacity("reset")
+    InfoPanel.style.display = "none"
+    Panel.style.display = "none"
+  }
+})
+
 
   const WordForToday = localStorage.getItem('word')
   let RowWord = []
@@ -2565,19 +2633,17 @@ document.addEventListener("keydown",e=>{
           if (correct_letters==5)
           {
             localStorage.setItem("gamestatus","WINNER")
+            Alerting(current_row)
             ShowPanel("WINNER")
           }
           else
           {
             localStorage.setItem("gamestatus","LOSER")
-           ShowPanel("LOSER")
+            ShowPanel("LOSER")
           }
         }
-        // if (correct_letters!=5)
-        // {
-
-        // }
-         
+        if (correct_letters!=5)
+        {
           OuterLoop:
           for(let i = 0;i<5;i++)
           {
@@ -2597,6 +2663,7 @@ document.addEventListener("keydown",e=>{
             CurrentRowLetters[i].style.backgroundColor = "#3A3A3C"
             current_evaluations[current_row][i] = "#3A3A3C"
           }
+        }
         
         RowWord=[]
         ValidWord = []
