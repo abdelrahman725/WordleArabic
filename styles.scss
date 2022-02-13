@@ -1,6 +1,12 @@
-*{ text-align: center;
-  box-sizing: border-box; 
+*
+{ 
+ text-align: center;
+ box-sizing: border-box; 
 }
+a{text-decoration: none;}
+
+i,a{color:rgb(118, 117, 117);}
+i:hover { cursor: pointer;}
 
 body
 {
@@ -9,7 +15,7 @@ body
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 
   sans-serif;
 }
-i:hover { cursor: pointer;}
+
 .container
 {
   position: relative;
@@ -21,9 +27,14 @@ i:hover { cursor: pointer;}
 
 .title
 {
-  
+
   font-size: 1cm;
- 
+  i{
+    font-size: 26px;
+  }
+    i:hover
+    {color: white;}
+    
   hr{
     position: relative;
     bottom: 15px;
@@ -47,7 +58,6 @@ i:hover { cursor: pointer;}
   margin-right: auto;
 
 }
-
 
 .panel
 {
@@ -90,15 +100,12 @@ i:hover { cursor: pointer;}
 }
 // close icon for both info and results
 .close
-{
-  color: rgb(78, 77, 77);
-  float: right;
-}
+{float: right;}
 
 .GameBoard
 {  
 
-position: absolute;
+  position: absolute;
     input
     {
       caret-color: transparent;
@@ -113,13 +120,14 @@ position: absolute;
     }
 
 }
-#info{
+.footer
+{
   position: absolute;
   margin-top: 410px;
-  font-size:30px;
-  color:rgb(179, 178, 178)
+  display: flex;
+  i 
+  {margin-right: 6px;}
 }
-#info:hover
-{
-color: white;
+.footer:hover{
+background-color: white;
 }

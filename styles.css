@@ -4,14 +4,22 @@
           box-sizing: border-box;
 }
 
-body {
-  background-color: black;
-  color: aliceblue;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',  sans-serif;
+a {
+  text-decoration: none;
+}
+
+i, a {
+  color: #767575;
 }
 
 i:hover {
   cursor: pointer;
+}
+
+body {
+  background-color: black;
+  color: aliceblue;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',  sans-serif;
 }
 
 .container {
@@ -27,6 +35,14 @@ i:hover {
 
 .title {
   font-size: 1cm;
+}
+
+.title i {
+  font-size: 26px;
+}
+
+.title i:hover {
+  color: white;
 }
 
 .title hr {
@@ -90,7 +106,6 @@ i:hover {
 }
 
 .close {
-  color: #4e4d4d;
   float: right;
 }
 
@@ -110,14 +125,19 @@ i:hover {
   background-color: black;
 }
 
-#info {
+.footer {
   position: absolute;
   margin-top: 410px;
-  font-size: 30px;
-  color: #b3b2b2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-#info:hover {
-  color: white;
+.footer i {
+  margin-right: 6px;
+}
+
+.footer:hover {
+  background-color: white;
 }
 /*# sourceMappingURL=styles.css.map */
