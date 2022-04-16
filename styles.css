@@ -19,7 +19,7 @@ i:hover {
 body {
   background-color: black;
   color: aliceblue;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',  sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',  sans-serif;
 }
 
 .container {
@@ -110,6 +110,7 @@ body {
 }
 
 .GameBoard {
+  margin-top: 50px;
   position: absolute;
 }
 
@@ -127,7 +128,7 @@ body {
 
 .footer {
   position: absolute;
-  margin-top: 410px;
+  margin-top: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
