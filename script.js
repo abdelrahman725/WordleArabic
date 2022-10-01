@@ -3,40 +3,32 @@ import GetWords from "./Dictionary.js"
 
 const ArabicWords = GetWords() 
 
+const messages = [
+  "هل لديك قدرة خارقة؟",
+  "مستحيل انت عبقرى",
+  "عظيم",
+  "عمل جيد",
+  "لست سيئا",
+  "أوه، كان هذا وشيكا"
+]
+
 function Alerting(msg)
 {
   let AlertBox = document.getElementById("alerting")
  
-  if (msg===0)
+  
+  if ( Number.isInteger(msg))
   {
-    msg = "مستحيل انت عبقرى"
-  }
-  if (msg===1)
-  {
-    msg = "هل لديك قدرة خارقة؟"
-  }
-  if (msg===2)
-  {
-    msg = "عظيم"
+    AlertBox.innerHTML = messages[msg]
   }
 
-  if (msg===3)
+  else
   {
-    msg = "عمل جيد"
+    AlertBox.innerHTML = msg
   }
 
-  if (msg===4)
-  {
-    msg = "لست سيئا"
-  }
-
-  if (msg===5)
-  {
-    msg = "أوه، كان هذا وشيكا"
-  }
-
-  AlertBox.innerHTML = msg
   AlertBox.style.visibility="visible"
+  
   setTimeout(()=>{
    AlertBox.style.visibility="hidden"
   },3000)
@@ -90,6 +82,7 @@ function NumberOfDays()
   let dayscount = Math.floor(diff/ (1000 * 60 * 60 * 24))
   return dayscount;
 }
+
 function GetTodayWord()
 {
   let key = Object.keys(ArabicWords)[NumberOfDays()%28]
@@ -122,6 +115,7 @@ function BackgroundOpacity(state)
   }
 
 }
+
 function ShowPanel(state)
 {
   
@@ -212,7 +206,7 @@ let Info=document.getElementById("info")
 let Panel = document.querySelector(".panel")
 let InfoPanel = document.querySelector(".info_panel")
 
-// showing information panel when user clicks on info icon
+// show information panel when user clicks on info icon
 Info.addEventListener("click",()=>{
   BackgroundOpacity("fade")
   Panel.style.display = "none"
@@ -225,13 +219,13 @@ document.getElementById("close_panel").addEventListener("click",()=>{
   Panel.style.display = "none"
 
 })
+
 document.getElementById("close_info").addEventListener("click",()=>{
   BackgroundOpacity("reset")
   InfoPanel.style.display = "none"
 })
 
-
-// closing any opened window when user clicks anywhere outside it 
+// close any opened window when user clicks anywhere outside it 
 document.addEventListener("click",(e)=>{
   if(!Info.contains(e.target) && !Panel.contains(e.target) && !InfoPanel.contains(e.target))
   {
@@ -280,7 +274,7 @@ document.addEventListener("keydown",e=>{
   }
 
   
-  // checking the user's word after pressing Enter key
+  // check the word after pressing Enter
   if (e.key=="Enter" && current_position===5 && current_row <=5   && localStorage.gamestatus =="playing")
   {
 
