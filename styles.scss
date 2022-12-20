@@ -1,23 +1,22 @@
-*
-{ 
+
+*{ 
  text-align: center;
  box-sizing: border-box; 
 }
-a{text-decoration: none;}
 
-i,a{color:rgb(118, 117, 117);}
-i:hover { cursor: pointer;}
-
-body
-{
+body{
   background-color: black;
   color: aliceblue;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 
   sans-serif;
 }
 
-.container
-{
+a{text-decoration: none;}
+
+i,a{color:rgb(118, 117, 117);}
+i:hover { cursor: pointer;}
+
+.container{
   position: relative;
   display: flex;
   width: 100%;
@@ -25,9 +24,7 @@ body
 }
 
 
-.title
-{
-
+.title{
   font-size: 1cm;
   i{
     font-size: 26px;
@@ -42,8 +39,8 @@ body
     opacity: 30%;    
   }
 }
-#alerting
-{
+
+#alerting{
   visibility: hidden;
   z-index: 2;
   position: relative;
@@ -59,9 +56,7 @@ body
 
 }
 
-.panel
-{
-
+.panel{
   display: none;
   padding: 8px;
   background-color: white;
@@ -79,9 +74,7 @@ body
   {font-size: 0.8cm;}
 }
 
-.info_panel
-{
-
+.info_panel{
   display: none;
   padding: 10px;
   border-radius: 3px;
@@ -102,9 +95,9 @@ body
 .close
 {float: right;}
 
-.GameBoard
-{margin-top: 50px;  
+.GameBoard{
 
+  margin-top: 50px;  
   position: absolute;
     input
     {
@@ -120,8 +113,8 @@ body
     }
 
 }
-.footer
-{
+
+.footer{
   position: absolute;
   margin-top:500px;
   display: flex ;
