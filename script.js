@@ -13,8 +13,8 @@ const messages = [
 ]
 
 function Alerting(msg) {
-  let AlertBox = document.getElementById("alerting")
 
+  let AlertBox = document.getElementById("alerting")
 
   if (Number.isInteger(msg)) {
     AlertBox.innerHTML = messages[msg]

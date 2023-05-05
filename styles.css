@@ -4,22 +4,23 @@
           box-sizing: border-box;
 }
 
+body {
+  background-color: black;
+  color: aliceblue;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
 a {
   text-decoration: none;
 }
 
-i, a {
+i,
+a {
   color: #767575;
 }
 
 i:hover {
   cursor: pointer;
-}
-
-body {
-  background-color: black;
-  color: aliceblue;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',  sans-serif;
 }
 
 .container {
@@ -34,7 +35,11 @@ body {
 }
 
 .title {
-  font-size: 1cm;
+  margin-top: 25px;
+}
+
+.title p {
+  color: #bab3b3;
 }
 
 .title i {
@@ -84,7 +89,8 @@ body {
   font-size: large;
 }
 
-.panel #timer, .panel #status {
+.panel #timer,
+.panel #status {
   font-size: 0.8cm;
 }
 
@@ -96,7 +102,7 @@ body {
   color: black;
   position: absolute;
   z-index: 2;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   width: 350px;
   height: 400px;
 }

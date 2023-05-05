@@ -1,103 +1,108 @@
 <!DOCTYPE html>
 <html lang="ar">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wordle in Arabic</title>
-  <script type ="module" src="script.js"></script>
+  <script type="module" src="script.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="styles.css"> 
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  
-<div class="title">
-  wordle in arabic
-  <i id ="info"class="material-icons">info_outline</i>
-  <hr>
-</div>
-  
-<div class="container">
 
-<div id="alerting"></div>
+  <div class="title">
+    <h1>
+      Wordle in Arabic <i id="info" class="material-icons">info_outline</i>
+    </h1>
+    <hr>
+    <p>please use PC as the mobile version is not supported yet</p>
+  </div>
 
-<div class="panel">
-  <i id ="close_panel" class="close material-icons">&#xe5cd;</i>
-  <p id="status"></p>
+  <div class="container">
 
-  <p id="answer" hidden>
-  الإجابة : 
-  <strong></strong>
-  </p>
-  <br>
-  <p>الكلمة التالية بعد</p>
-  <div id="timer"></div>
-</div>
+    <div id="alerting"></div>
 
-<div class="info_panel">
-  <i id="close_info" class="close material-icons">&#xe5cd;</i>
+    <div class="panel">
+      <i id="close_panel" class="close material-icons">&#xe5cd;</i>
+      <p id="status"></p>
 
-  <p class="title_info">
-    Wordle النسخة العربية من اللعبة المشهورة
-  </p>
-  <br>
-  <p>لتبسيط اللعب جرب فقط أسماء وصفات حيث أن الأفعال والضمائر مستبعدة</p>
-  <p>جميع علامات التشكيل مستبعدة</p>
-  
-</div>
+      <p id="answer" hidden>
+        الإجابة :
+        <strong></strong>
+      </p>
+      <br>
+      <p>الكلمة التالية بعد</p>
+      <div id="timer"></div>
+    </div>
+
+    <div class="info_panel">
+      <i id="close_info" class="close material-icons">&#xe5cd;</i>
+
+      <p class="title_info">
+        Wordle النسخة العربية من اللعبة المشهورة
+      </p>
+      <br>
+      <p>لتبسيط اللعب جرب فقط أسماء وصفات حيث أن الأفعال والضمائر مستبعدة</p>
+      <p>جميع علامات التشكيل مستبعدة</p>
+
+    </div>
 
 
-<div class="GameBoard">
- <div class="game_row row0">
-   <input id="row0_letter4"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row0_letter3"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row0_letter2"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row0_letter1"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row0_letter0"  type="text" maxlength="1" autocomplete="off"  disabled="true">
- </div>
-  <div class="game_row row1">
-   <input id="row1_letter4"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row1_letter3"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row1_letter2"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row1_letter1"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row1_letter0"  type="text" maxlength="1" autocomplete="off"  disabled="true">
- </div>
-  <div class="game_row row2">
-   <input id="row2_letter4"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row2_letter3"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row2_letter2"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row2_letter1"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row2_letter0"  type="text" maxlength="1" autocomplete="off"  disabled="true">
- </div>
-  <div class="game_row row3">
-   <input id="row3_letter4"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row3_letter3"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row3_letter2"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row3_letter1"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row3_letter0"  type="text" maxlength="1" autocomplete="off"  disabled="true">
- </div>
-  <div class="game_row row4">
-   <input id="row4_letter4"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row4_letter3"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row4_letter2"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row4_letter1"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row4_letter0"  type="text" maxlength="1" autocomplete="off"  disabled="true">
- </div>
-  <div class="game_row row5">
-   <input id="row5_letter4"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row5_letter3"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row5_letter2"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row5_letter1"  type="text" maxlength="1" autocomplete="off"  disabled="true">
-   <input id="row5_letter0"  type="text" maxlength="1" autocomplete="off"  disabled="true">
- </div>
-</div>
+    <div class="GameBoard">
+      <div class="game_row row0">
+        <input id="row0_letter4" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row0_letter3" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row0_letter2" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row0_letter1" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row0_letter0" type="text" maxlength="1" autocomplete="off" disabled="true">
+      </div>
+      <div class="game_row row1">
+        <input id="row1_letter4" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row1_letter3" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row1_letter2" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row1_letter1" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row1_letter0" type="text" maxlength="1" autocomplete="off" disabled="true">
+      </div>
+      <div class="game_row row2">
+        <input id="row2_letter4" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row2_letter3" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row2_letter2" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row2_letter1" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row2_letter0" type="text" maxlength="1" autocomplete="off" disabled="true">
+      </div>
+      <div class="game_row row3">
+        <input id="row3_letter4" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row3_letter3" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row3_letter2" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row3_letter1" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row3_letter0" type="text" maxlength="1" autocomplete="off" disabled="true">
+      </div>
+      <div class="game_row row4">
+        <input id="row4_letter4" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row4_letter3" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row4_letter2" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row4_letter1" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row4_letter0" type="text" maxlength="1" autocomplete="off" disabled="true">
+      </div>
+      <div class="game_row row5">
+        <input id="row5_letter4" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row5_letter3" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row5_letter2" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row5_letter1" type="text" maxlength="1" autocomplete="off" disabled="true">
+        <input id="row5_letter0" type="text" maxlength="1" autocomplete="off" disabled="true">
+      </div>
+    </div>
 
-<div class="footer">
-  <i class="material-icons">&#xe86f;</i>
-  <a href="https://github.com/abdelrahman725/WordleArabic/" target="_blank" rel="noopener noreferrer">source code</a>
-</div>
+    <div class="footer">
+      <i class="material-icons">&#xe86f;</i>
+      <a href="https://github.com/abdelrahman725/WordleArabic/" target="_blank" rel="noopener noreferrer">source
+        code</a>
+    </div>
 
-</div>
+  </div>
 </body>
+
 </html>
