@@ -145,18 +145,26 @@ i:hover {
 }
 
 .footer {
+  border-radius: 10px;
   position: absolute;
-  margin-top: 550px;
+  padding: 5px;
+  margin-top: 560px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+.footer a, .footer i {
+  color: white;
+}
+
 .footer i {
+  position: relative;
+  bottom: 3px;
   margin-right: 6px;
 }
 
 .footer:hover {
-  background-color: white;
+  background-color: #5f5a5a;
 }
 /*# sourceMappingURL=styles.css.map */

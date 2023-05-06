@@ -134,13 +134,20 @@ i:hover {
   }
 }
 .footer {
+  a,i{
+    color: white;
+  }
+  border-radius: 10px;
   position: absolute;
-  margin-top: 550px;
+  padding: 5px;
+  margin-top: 560px;
   display: flex;
   i {
+    position: relative;
+    bottom: 3px;
     margin-right: 6px;
   }
 }
 .footer:hover {
-  background-color: white;
+  background-color: rgb(95, 90, 90);
 }

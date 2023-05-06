@@ -240,13 +240,13 @@ document.addEventListener("DOMContentLoaded", () => {
   let RowWord = []
   let current_row = Number(localStorage.row);
   let current_position = 0;
-  let AraicOnlyPattern = /^[\u0621-\u064A]+$/
+  let ArabicPattern = /^[\u0621-\u064A]+$/
 
   document.addEventListener("keypress", e => {
     if (current_position <= 4 && current_row <= 5 && localStorage.gamestatus == "playing") {
 
       let CurrentLetter = document.getElementById(`row${current_row}_letter${current_position}`);
-      if (AraicOnlyPattern.test(e.key)) {
+      if (ArabicPattern.test(e.key)) {
         if (CurrentLetter.value == "") {
           RowWord.push(e.key)
           CurrentLetter.value = e.key
