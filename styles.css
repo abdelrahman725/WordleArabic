@@ -116,7 +116,7 @@ i:hover {
 }
 
 .GameBoard {
-  margin-top: 50px;
+  margin-top: 150px;
   position: absolute;
 }
 
@@ -132,9 +132,21 @@ i:hover {
   background-color: black;
 }
 
+.available_letters {
+  position: absolute;
+  margin-right: 35px;
+  margin-left: 35px;
+}
+
+.available_letters span {
+  font-size: x-large;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 .footer {
   position: absolute;
-  margin-top: 500px;
+  margin-top: 550px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

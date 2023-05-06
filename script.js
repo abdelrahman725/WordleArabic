@@ -1,7 +1,9 @@
 
-import GetWords from "./Dictionary.js"
+import ArabicDict from "./Dictionary.js"
 
-const ArabicWords = GetWords()
+const not_exist_color = "#3A3A3C"
+const wrong_position_color = "#C9B558"
+const correct_position_color = "green"
 
 const messages = [
   "هل لديك قدرة خارقة؟",
@@ -12,24 +14,31 @@ const messages = [
   "أوه، كان هذا وشيكا"
 ]
 
-function Alerting(msg) {
+function rebuild_available_letters() {
 
-  let AlertBox = document.getElementById("alerting")
+  const letters_container = document.getElementById("letters")
 
-  if (Number.isInteger(msg)) {
-    AlertBox.innerHTML = messages[msg]
+  for (const key in ArabicDict) {
+    const letter = document.createElement("span")
+    letter.id = key
+    letter.innerHTML = `${key} `
+    letters_container.appendChild(letter)
   }
 
-  else {
-    AlertBox.innerHTML = msg
+  const letter = document.createElement("span")
+  letter.id = 'ة'
+  letter.innerHTML = 'ة '
+  letters_container.appendChild(letter)
+
+  const wrong_letters = JSON.parse(localStorage.getItem('wrong_letters'))
+  for (const letter_ith in wrong_letters) {
+    hide_letter(wrong_letters[letter_ith])
   }
 
-  AlertBox.style.visibility = "visible"
+}
 
-  setTimeout(() => {
-    AlertBox.style.visibility = "hidden"
-  }, 3000)
-
+function hide_letter(letter) {
+  document.getElementById(letter).style.visibility = "hidden"
 }
 
 function TimeLeft() {
@@ -75,15 +84,15 @@ function NumberOfDays() {
 }
 
 function GetTodayWord() {
-  let key = Object.keys(ArabicWords)[NumberOfDays() % 28]
-  let letter = NumberOfDays() % (ArabicWords[key].length)
-  return ArabicWords[key][letter]
+  let key = Object.keys(ArabicDict)[NumberOfDays() % 28]
+  let letter = NumberOfDays() % (ArabicDict[key].length)
+  return ArabicDict[key][letter]
 }
 
 function SearchDict(word) {
   let key = word[0]
-  for (let i = 0; i < ArabicWords[key].length; i++) {
-    if (ArabicWords[key][i] == word)
+  for (let i = 0; i < ArabicDict[key].length; i++) {
+    if (ArabicDict[key][i] == word)
       return true
   }
   return false
@@ -99,7 +108,6 @@ function BackgroundOpacity(state) {
     document.querySelector(".title").style.opacity = "100%"
   }
 }
-
 
 function ShowPanel(state) {
 
@@ -130,12 +138,33 @@ function RestartGame() {
       initial_evaluations[row][column] = null
     }
   }
-
+  rebuild_available_letters()
   localStorage.setItem('evaluations', JSON.stringify(initial_evaluations))
   localStorage.setItem('userwords', JSON.stringify([]))
+  localStorage.setItem('wrong_letters', JSON.stringify([]))
   localStorage.setItem('gamestatus', "playing")
   localStorage.setItem('row', 0)
   localStorage.setItem('word', GetTodayWord())
+}
+
+function Alerting(msg) {
+
+  let AlertBox = document.getElementById("alerting")
+
+  if (Number.isInteger(msg)) {
+    AlertBox.innerHTML = messages[msg]
+  }
+
+  else {
+    AlertBox.innerHTML = msg
+  }
+
+  AlertBox.style.visibility = "visible"
+
+  setTimeout(() => {
+    AlertBox.style.visibility = "hidden"
+  }, 3000)
+
 }
 
 
@@ -149,7 +178,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // subsequential visits
   else {
-
     // check first if it is the same day
     if (localStorage.word === GetTodayWord()) {
       // filling previous played positions whether user still playing or has finished
@@ -164,6 +192,8 @@ document.addEventListener("DOMContentLoaded", () => {
           letter++
         }
       }
+
+      rebuild_available_letters()
       ShowPanel(localStorage.getItem('gamestatus'))
 
     }
@@ -250,15 +280,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (SearchDict(RowWordString)) {
 
-        let current_evaluations = JSON.parse(localStorage.getItem('evaluations'));
+        let current_evaluations = JSON.parse(localStorage.getItem('evaluations'))
+
+        const wrong_letters = new Set(JSON.parse(localStorage.getItem('wrong_letters')))
+
         let correct_letters = 0
         current_position = 0;
 
         for (let i = 0; i < 5; i++) {
           CurrentRowLetters[i].style.borderColor = "#434343"
           if (RowWord[i] == ValidWord[i]) {
-            CurrentRowLetters[i].style.backgroundColor = "green"
-            current_evaluations[current_row][i] = "green"
+            CurrentRowLetters[i].style.backgroundColor = correct_position_color
+            current_evaluations[current_row][i] = correct_position_color
             RowWord[i] = "-"
             ValidWord[i] = "_"
             correct_letters++
@@ -287,14 +320,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
             for (let j = 0; j < 5; j++) {
               if (RowWord[i] == ValidWord[j]) {
-                CurrentRowLetters[i].style.backgroundColor = "#C9B558"
-                current_evaluations[current_row][i] = "#C9B558"
+                CurrentRowLetters[i].style.backgroundColor = wrong_position_color
+                current_evaluations[current_row][i] = wrong_position_color
                 ValidWord[j] = "_"
                 continue OuterLoop
               }
             }
-            CurrentRowLetters[i].style.backgroundColor = "#3A3A3C"
-            current_evaluations[current_row][i] = "#3A3A3C"
+            hide_letter(RowWord[i])
+            wrong_letters.add(RowWord[i])
+            localStorage.setItem('wrong_letters', JSON.stringify(Array.from(wrong_letters)))
+            CurrentRowLetters[i].style.backgroundColor = not_exist_color
+            current_evaluations[current_row][i] = not_exist_color
           }
         }
 

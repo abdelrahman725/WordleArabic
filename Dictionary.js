@@ -1,6 +1,4 @@
-export default function GetWords() {
-
-  const arabic_dict = {
+const ArabicDict = {
     'أ':
       [
         'أباظة',
@@ -5215,7 +5213,6 @@ export default function GetWords() {
         'إيلاف',
         'إيناس',
         'إيهاب']
-  }
-
-  return arabic_dict;
 }
+
+export default ArabicDict
