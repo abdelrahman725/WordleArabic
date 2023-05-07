@@ -138,10 +138,10 @@ function RestartGame() {
       initial_evaluations[row][column] = null
     }
   }
+  localStorage.setItem('wrong_letters', JSON.stringify([]))
   rebuild_available_letters()
   localStorage.setItem('evaluations', JSON.stringify(initial_evaluations))
   localStorage.setItem('userwords', JSON.stringify([]))
-  localStorage.setItem('wrong_letters', JSON.stringify([]))
   localStorage.setItem('gamestatus', "playing")
   localStorage.setItem('row', 0)
   localStorage.setItem('word', GetTodayWord())
