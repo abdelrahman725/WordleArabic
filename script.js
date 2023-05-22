@@ -15,6 +15,7 @@ const messages = [
 ]
 
 function rebuild_available_letters() {
+  console.log(Object.keys(ArabicDict).length)
 
   const letters_container = document.getElementById("letters")
 
@@ -24,11 +25,6 @@ function rebuild_available_letters() {
     letter.innerHTML = `${key} `
     letters_container.appendChild(letter)
   }
-
-  const letter = document.createElement("span")
-  letter.id = 'ة'
-  letter.innerHTML = 'ة '
-  letters_container.appendChild(letter)
 
   const wrong_letters = JSON.parse(localStorage.getItem('wrong_letters'))
   for (const letter_ith in wrong_letters) {
@@ -84,9 +80,9 @@ function NumberOfDays() {
 }
 
 function GetTodayWord() {
-  let key = Object.keys(ArabicDict)[NumberOfDays() % 28]
-  let letter = NumberOfDays() % (ArabicDict[key].length)
-  return ArabicDict[key][letter]
+  let key = Object.keys(ArabicDict)[NumberOfDays() % 30]
+  let word = NumberOfDays() % (ArabicDict[key].length)
+  return ArabicDict[key][word]
 }
 
 function SearchDict(word) {
@@ -261,7 +257,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("keydown", e => {
 
-    if (e.key == "Backspace" && current_position > 0 && localStorage.gamestatus == "playing") {
+    if (localStorage.gamestatus !== "playing") {
+      return
+    }
+
+    if (e.key == "Backspace" && current_position > 0) {
       current_position--;
       let CurrentLetter = document.getElementById(`row${current_row}_letter${current_position}`);
       CurrentLetter.value = "";
@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // check the word after pressing Enter
-    if (e.key == "Enter" && current_position === 5 && current_row <= 5 && localStorage.gamestatus == "playing") {
+    if (e.key == "Enter" && current_position === 5 && current_row <= 5) {
 
       const RowWordString = RowWord.join('')
       let ValidWord = [...WordForToday]
