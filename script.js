@@ -15,7 +15,6 @@ const messages = [
 ]
 
 function rebuild_available_letters() {
-  console.log(Object.keys(ArabicDict).length)
 
   const letters_container = document.getElementById("letters")
 
